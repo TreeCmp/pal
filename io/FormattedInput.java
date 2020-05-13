@@ -238,11 +238,11 @@ public class FormattedInput implements Serializable
 			c = in.read();
 		}
 		while (c != EOF &&
-			!(c == '-' || c == '+' || c == '.' || Character.isDigit((char) c)));
+			!(c == '-' || c == '.' || Character.isDigit((char) c)));
 
 		// search for last number character
 		while (c != EOF &&
-			(c == '-' || c == '+' || c == '.' || c == 'e'
+			(c == '-' || c == '.' || c == 'e'
 			|| c == 'E' || Character.isDigit((char) c))
 			|| (isNewlineCR(c) && ignoreNewlineCR) )
 		{
