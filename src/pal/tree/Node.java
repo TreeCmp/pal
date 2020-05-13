@@ -132,7 +132,7 @@ public interface Node extends Serializable {
 	 * add new child node (insertion at a specific position)
 	 *
 	 * @param c new child node
-	 + @param pos position
+	+ @param pos position
 	 */
 	void insertChild(Node c, int pos);
 
@@ -143,4 +143,11 @@ public interface Node extends Serializable {
 	 * @param n number of child to be removed
 	 */
 	Node removeChild(int n);
+
+	/**
+	 * remove child
+	 *
+	 * @param n child Node to be removed
+	 */
+	Node removeChild(Node n);
 }

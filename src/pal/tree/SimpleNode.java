@@ -514,6 +514,23 @@ public class SimpleNode implements AttributeNode {
 	}
 
 	/**
+	 * remove child
+	 *
+	 * @param n child Node to be removed
+	 */
+	public Node removeChild(Node n)
+	{
+		int numChildren = getChildCount();
+
+		for (int i = 0; i < numChildren; i++) {
+			if (child[i] == n) {
+				return removeChild(i);
+			}
+		}
+		throw new IllegalArgumentException("Nonexistent child");
+	}
+
+	/**
 	 * determines the height of this node and its descendants
 	 * from branch lengths, assuming contemporaneous tips.
 	 */
